@@ -10,11 +10,10 @@ package circuitdesigner;
  * @author marco
  */
 public class Window extends javax.swing.JFrame {
-
     /**
      * Creates new form Window
      */
-    public Window() {
+    public  Window() {
         initComponents();
     }
 
@@ -38,12 +37,18 @@ public class Window extends javax.swing.JFrame {
         Canva_inicio.setBackground(new java.awt.Color(127, 174, 220));
 
         jLabel1.setFont(new java.awt.Font("M+ 1c black", 0, 36)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(138, 153, 185));
+        jLabel1.setForeground(new java.awt.Color(226, 235, 254));
         jLabel1.setText("  CIRCUIT DESIGNER ");
 
+        boton_acerca.setFont(new java.awt.Font("Garuda", 1, 14)); // NOI18N
         boton_acerca.setForeground(new java.awt.Color(255, 133, 0));
         boton_acerca.setText("Acerca de:");
         boton_acerca.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(96, 108, 125), 3, true));
+        boton_acerca.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                boton_acercaActionPerformed(evt);
+            }
+        });
 
         boton_crear.setFont(new java.awt.Font("Garuda", 3, 14)); // NOI18N
         boton_crear.setForeground(new java.awt.Color(54, 255, 0));
@@ -54,6 +59,11 @@ public class Window extends javax.swing.JFrame {
         jButton1.setForeground(new java.awt.Color(255, 24, 0));
         jButton1.setText("Salir");
         jButton1.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(96, 108, 125), 3, true));
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout Canva_inicioLayout = new javax.swing.GroupLayout(Canva_inicio);
         Canva_inicio.setLayout(Canva_inicioLayout);
@@ -66,8 +76,8 @@ public class Window extends javax.swing.JFrame {
                         .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 387, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addContainerGap(38, Short.MAX_VALUE))
                     .addGroup(Canva_inicioLayout.createSequentialGroup()
-                        .addComponent(boton_acerca)
-                        .addGap(76, 76, 76)
+                        .addComponent(boton_acerca, javax.swing.GroupLayout.PREFERRED_SIZE, 83, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(68, 68, 68)
                         .addComponent(boton_crear, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -106,6 +116,20 @@ public class Window extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    private void boton_acercaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton_acercaActionPerformed
+        
+        Info_Window Info = new Info_Window();
+        Info.setVisible(true);
+        
+    }//GEN-LAST:event_boton_acercaActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        
+        this.setVisible(false);
+        
+        this.dispose();
+    }//GEN-LAST:event_jButton1ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -137,6 +161,7 @@ public class Window extends javax.swing.JFrame {
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 new Window().setVisible(true);
+                
             }
         });
     }
