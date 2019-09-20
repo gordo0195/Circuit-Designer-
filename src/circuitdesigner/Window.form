@@ -55,7 +55,7 @@
                   <EmptySpace min="-2" pref="36" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" attributes="0">
-                          <Component id="jLabel1" min="-2" pref="387" max="-2" attributes="0"/>
+                          <Component id="Etiqueta_TItuloRaíz" min="-2" pref="387" max="-2" attributes="0"/>
                           <EmptySpace pref="38" max="32767" attributes="0"/>
                       </Group>
                       <Group type="102" attributes="0">
@@ -63,7 +63,7 @@
                           <EmptySpace min="-2" pref="68" max="-2" attributes="0"/>
                           <Component id="boton_crear" min="-2" pref="93" max="-2" attributes="0"/>
                           <EmptySpace max="32767" attributes="0"/>
-                          <Component id="jButton1" min="-2" pref="51" max="-2" attributes="0"/>
+                          <Component id="Botón_SalidaPrincip" min="-2" pref="51" max="-2" attributes="0"/>
                           <EmptySpace min="-2" pref="47" max="-2" attributes="0"/>
                       </Group>
                   </Group>
@@ -74,12 +74,12 @@
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" alignment="0" attributes="0">
                   <EmptySpace min="-2" pref="32" max="-2" attributes="0"/>
-                  <Component id="jLabel1" min="-2" pref="114" max="-2" attributes="0"/>
+                  <Component id="Etiqueta_TItuloRaíz" min="-2" pref="114" max="-2" attributes="0"/>
                   <EmptySpace pref="65" max="32767" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="boton_acerca" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="boton_crear" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="jButton1" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="Botón_SalidaPrincip" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace min="-2" pref="32" max="-2" attributes="0"/>
               </Group>
@@ -87,7 +87,7 @@
         </DimensionLayout>
       </Layout>
       <SubComponents>
-        <Component class="javax.swing.JLabel" name="jLabel1">
+        <Component class="javax.swing.JLabel" name="Etiqueta_TItuloRa&#xed;z">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="M+ 1c black" size="36" style="0"/>
@@ -136,8 +136,11 @@
               </Border>
             </Property>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="boton_crearActionPerformed"/>
+          </Events>
         </Component>
-        <Component class="javax.swing.JButton" name="jButton1">
+        <Component class="javax.swing.JButton" name="Bot&#xf3;n_SalidaPrincip">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Garuda" size="14" style="3"/>
@@ -155,7 +158,7 @@
             </Property>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton1ActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="Bot&#xf3;n_SalidaPrincipActionPerformed"/>
           </Events>
         </Component>
       </SubComponents>
