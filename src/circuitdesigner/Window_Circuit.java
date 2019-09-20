@@ -30,10 +30,13 @@ public class Window_Circuit extends javax.swing.JFrame {
         Canva_circuit = new javax.swing.JPanel();
         Pallete_Canva = new javax.swing.JLayeredPane();
         Etiq_Pallete = new javax.swing.JLabel();
+        Abort_circuit = new javax.swing.JButton();
+        Probar_Boton = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setPreferredSize(new java.awt.Dimension(900, 900));
+        setPreferredSize(new java.awt.Dimension(900, 670));
         setResizable(false);
+        setSize(new java.awt.Dimension(900, 670));
 
         Canva_circuit.setBackground(new java.awt.Color(243, 253, 252));
         Canva_circuit.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Circuit Designer by Marco Picado", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Dialog", 1, 14), new java.awt.Color(6, 4, 237))); // NOI18N
@@ -51,7 +54,7 @@ public class Window_Circuit extends javax.swing.JFrame {
         );
         Pallete_CanvaLayout.setVerticalGroup(
             Pallete_CanvaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 216, Short.MAX_VALUE)
+            .addGap(0, 346, Short.MAX_VALUE)
         );
 
         Etiq_Pallete.setBackground(new java.awt.Color(68, 208, 184));
@@ -59,12 +62,24 @@ public class Window_Circuit extends javax.swing.JFrame {
         Etiq_Pallete.setForeground(new java.awt.Color(1, 1, 1));
         Etiq_Pallete.setText("PALETE");
 
+        Abort_circuit.setText("Salir");
+        Abort_circuit.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Abort_circuitActionPerformed(evt);
+            }
+        });
+
+        Probar_Boton.setText("Probar");
+
         javax.swing.GroupLayout Canva_circuitLayout = new javax.swing.GroupLayout(Canva_circuit);
         Canva_circuit.setLayout(Canva_circuitLayout);
         Canva_circuitLayout.setHorizontalGroup(
             Canva_circuitLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, Canva_circuitLayout.createSequentialGroup()
-                .addContainerGap(304, Short.MAX_VALUE)
+                .addComponent(Abort_circuit)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 641, Short.MAX_VALUE)
+                .addComponent(Probar_Boton)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(Canva_circuitLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(Pallete_Canva)
                     .addComponent(Etiq_Pallete, javax.swing.GroupLayout.DEFAULT_SIZE, 86, Short.MAX_VALUE)))
@@ -73,24 +88,46 @@ public class Window_Circuit extends javax.swing.JFrame {
             Canva_circuitLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(Canva_circuitLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(Etiq_Pallete)
-                .addGap(18, 18, 18)
-                .addComponent(Pallete_Canva))
+                .addGroup(Canva_circuitLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(Canva_circuitLayout.createSequentialGroup()
+                        .addComponent(Etiq_Pallete)
+                        .addGap(18, 18, 18)
+                        .addComponent(Pallete_Canva))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, Canva_circuitLayout.createSequentialGroup()
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addGroup(Canva_circuitLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(Abort_circuit, javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, Canva_circuitLayout.createSequentialGroup()
+                                .addComponent(Probar_Boton)
+                                .addContainerGap())))))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(Canva_circuit, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(Canva_circuit, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(Canva_circuit, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(Canva_circuit, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void Abort_circuitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Abort_circuitActionPerformed
+        
+        this.setVisible(false);
+        this.dispose();
+        
+    }//GEN-LAST:event_Abort_circuitActionPerformed
 
     /**
      * @param args the command line arguments
@@ -128,8 +165,10 @@ public class Window_Circuit extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton Abort_circuit;
     private javax.swing.JPanel Canva_circuit;
     private javax.swing.JLabel Etiq_Pallete;
     private javax.swing.JLayeredPane Pallete_Canva;
+    private javax.swing.JButton Probar_Boton;
     // End of variables declaration//GEN-END:variables
 }
