@@ -51,19 +51,25 @@ public class Window_Circuit extends javax.swing.JFrame {
         Canva_circuit.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Circuit Designer by Marco Picado", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Dialog", 1, 14), new java.awt.Color(6, 4, 237))); // NOI18N
         Canva_circuit.setPreferredSize(new java.awt.Dimension(110, 700));
 
+        Abort_circuit.setFont(new java.awt.Font("Ubuntu", 1, 13)); // NOI18N
+        Abort_circuit.setForeground(new java.awt.Color(169, 25, 25));
         Abort_circuit.setText("Salir");
+        Abort_circuit.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(173, 29, 29), 3, true));
         Abort_circuit.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 Abort_circuitActionPerformed(evt);
             }
         });
 
+        Probar_Boton.setFont(new java.awt.Font("Ubuntu", 1, 13)); // NOI18N
+        Probar_Boton.setForeground(new java.awt.Color(73, 84, 196));
         Probar_Boton.setText("Probar");
+        Probar_Boton.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(67, 62, 184), 3, true));
 
         Etiq_Pallete.setBackground(new java.awt.Color(68, 208, 184));
-        Etiq_Pallete.setFont(new java.awt.Font("Kristen ITC", 1, 24)); // NOI18N
+        Etiq_Pallete.setFont(new java.awt.Font("Dyuthi", 1, 36)); // NOI18N
         Etiq_Pallete.setForeground(new java.awt.Color(1, 1, 1));
-        Etiq_Pallete.setText("    PALLETE");
+        Etiq_Pallete.setText("  PALLETE");
 
         Pallete_Canva.setBackground(new java.awt.Color(166, 236, 229));
         Pallete_Canva.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(46, 174, 221), 3, true));
@@ -134,9 +140,9 @@ public class Window_Circuit extends javax.swing.JFrame {
         Canva_circuitLayout.setHorizontalGroup(
             Canva_circuitLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(Canva_circuitLayout.createSequentialGroup()
-                .addComponent(Abort_circuit)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 790, Short.MAX_VALUE)
-                .addComponent(Probar_Boton)
+                .addComponent(Abort_circuit, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 769, Short.MAX_VALUE)
+                .addComponent(Probar_Boton, javax.swing.GroupLayout.PREFERRED_SIZE, 63, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(Pallete_Canva, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(7, 7, 7))
@@ -152,8 +158,8 @@ public class Window_Circuit extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 18, Short.MAX_VALUE)
                 .addGroup(Canva_circuitLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, Canva_circuitLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(Probar_Boton)
-                        .addComponent(Abort_circuit))
+                        .addComponent(Probar_Boton, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(Abort_circuit, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addComponent(Pallete_Canva, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
         );
 
