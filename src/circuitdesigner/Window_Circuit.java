@@ -35,10 +35,12 @@ public class Window_Circuit extends javax.swing.JFrame {
         Etiq_Pallete = new javax.swing.JLabel();
         Pallete_Canva = new javax.swing.JLayeredPane();
         LabelAND = new javax.swing.JLabel();
-        jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
+        LabeNAND = new javax.swing.JLabel();
+        LabelOR = new javax.swing.JLabel();
+        LabelNOR = new javax.swing.JLabel();
+        LabelXOR = new javax.swing.JLabel();
+        LabelXNOR = new javax.swing.JLabel();
+        LabelNOT = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setPreferredSize(new java.awt.Dimension(1100, 700));
@@ -61,7 +63,7 @@ public class Window_Circuit extends javax.swing.JFrame {
         Etiq_Pallete.setBackground(new java.awt.Color(68, 208, 184));
         Etiq_Pallete.setFont(new java.awt.Font("Kristen ITC", 1, 24)); // NOI18N
         Etiq_Pallete.setForeground(new java.awt.Color(1, 1, 1));
-        Etiq_Pallete.setText("    PALETE");
+        Etiq_Pallete.setText("    PALLETE");
 
         Pallete_Canva.setBackground(new java.awt.Color(166, 236, 229));
         Pallete_Canva.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(46, 174, 221), 3, true));
@@ -70,13 +72,25 @@ public class Window_Circuit extends javax.swing.JFrame {
 
         LabelAND.setIcon(new javax.swing.ImageIcon(getClass().getResource("/circuitdesigner/images/and.png"))); // NOI18N
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/circuitdesigner/images/nand.png"))); // NOI18N
+        LabeNAND.setIcon(new javax.swing.ImageIcon(getClass().getResource("/circuitdesigner/images/nand.png"))); // NOI18N
 
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/circuitdesigner/images/or.png"))); // NOI18N
+        LabelOR.setIcon(new javax.swing.ImageIcon(getClass().getResource("/circuitdesigner/images/or.png"))); // NOI18N
 
-        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/circuitdesigner/images/nor.png"))); // NOI18N
+        LabelNOR.setIcon(new javax.swing.ImageIcon(getClass().getResource("/circuitdesigner/images/nor.png"))); // NOI18N
 
-        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/circuitdesigner/images/xor.png"))); // NOI18N
+        LabelXOR.setIcon(new javax.swing.ImageIcon(getClass().getResource("/circuitdesigner/images/xor.png"))); // NOI18N
+
+        LabelXNOR.setIcon(new javax.swing.ImageIcon(getClass().getResource("/circuitdesigner/images/xnor.png"))); // NOI18N
+
+        LabelNOT.setIcon(new javax.swing.ImageIcon(getClass().getResource("/circuitdesigner/images/not.png"))); // NOI18N
+
+        Pallete_Canva.setLayer(LabelAND, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        Pallete_Canva.setLayer(LabeNAND, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        Pallete_Canva.setLayer(LabelOR, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        Pallete_Canva.setLayer(LabelNOR, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        Pallete_Canva.setLayer(LabelXOR, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        Pallete_Canva.setLayer(LabelXNOR, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        Pallete_Canva.setLayer(LabelNOT, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         javax.swing.GroupLayout Pallete_CanvaLayout = new javax.swing.GroupLayout(Pallete_Canva);
         Pallete_Canva.setLayout(Pallete_CanvaLayout);
@@ -85,64 +99,62 @@ public class Window_Circuit extends javax.swing.JFrame {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, Pallete_CanvaLayout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(Pallete_CanvaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jLabel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jLabel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addGroup(Pallete_CanvaLayout.createSequentialGroup()
-                        .addGap(0, 0, Short.MAX_VALUE)
-                        .addComponent(LabelAND))
-                    .addComponent(jLabel1, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(LabelNOT, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(LabelXNOR, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(LabelXOR, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(LabelNOR, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(LabelOR, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(LabeNAND, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, Pallete_CanvaLayout.createSequentialGroup()
+                        .addComponent(LabelAND)
+                        .addGap(0, 0, Short.MAX_VALUE)))
                 .addContainerGap())
         );
         Pallete_CanvaLayout.setVerticalGroup(
             Pallete_CanvaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(Pallete_CanvaLayout.createSequentialGroup()
-                .addContainerGap(53, Short.MAX_VALUE)
                 .addComponent(LabelAND, javax.swing.GroupLayout.PREFERRED_SIZE, 86, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(LabeNAND)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(11, 11, 11)
-                .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(LabelOR, javax.swing.GroupLayout.PREFERRED_SIZE, 86, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 83, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(LabelNOR, javax.swing.GroupLayout.PREFERRED_SIZE, 76, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(LabelXOR, javax.swing.GroupLayout.PREFERRED_SIZE, 77, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(LabelXNOR, javax.swing.GroupLayout.PREFERRED_SIZE, 77, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(LabelNOT, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addContainerGap())
         );
-        Pallete_Canva.setLayer(LabelAND, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        Pallete_Canva.setLayer(jLabel1, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        Pallete_Canva.setLayer(jLabel2, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        Pallete_Canva.setLayer(jLabel3, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        Pallete_Canva.setLayer(jLabel4, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         javax.swing.GroupLayout Canva_circuitLayout = new javax.swing.GroupLayout(Canva_circuit);
         Canva_circuit.setLayout(Canva_circuitLayout);
         Canva_circuitLayout.setHorizontalGroup(
             Canva_circuitLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(Canva_circuitLayout.createSequentialGroup()
-                .addGroup(Canva_circuitLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(Canva_circuitLayout.createSequentialGroup()
-                        .addGap(0, 0, Short.MAX_VALUE)
-                        .addComponent(Etiq_Pallete, javax.swing.GroupLayout.PREFERRED_SIZE, 179, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, Canva_circuitLayout.createSequentialGroup()
-                        .addComponent(Abort_circuit)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 766, Short.MAX_VALUE)
-                        .addComponent(Probar_Boton)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(Pallete_Canva, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addComponent(Abort_circuit)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 790, Short.MAX_VALUE)
+                .addComponent(Probar_Boton)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(Pallete_Canva, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(7, 7, 7))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, Canva_circuitLayout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(Etiq_Pallete, javax.swing.GroupLayout.PREFERRED_SIZE, 179, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );
         Canva_circuitLayout.setVerticalGroup(
             Canva_circuitLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(Canva_circuitLayout.createSequentialGroup()
                 .addComponent(Etiq_Pallete, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 18, Short.MAX_VALUE)
                 .addGroup(Canva_circuitLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(Pallete_Canva, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, Canva_circuitLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                         .addComponent(Probar_Boton)
-                        .addComponent(Abort_circuit)))
-                .addGap(52, 52, 52))
+                        .addComponent(Abort_circuit))
+                    .addComponent(Pallete_Canva, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -153,7 +165,7 @@ public class Window_Circuit extends javax.swing.JFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(Canva_circuit, javax.swing.GroupLayout.PREFERRED_SIZE, 654, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(Canva_circuit, javax.swing.GroupLayout.DEFAULT_SIZE, 706, Short.MAX_VALUE)
         );
 
         pack();
@@ -205,12 +217,14 @@ public class Window_Circuit extends javax.swing.JFrame {
     private javax.swing.JButton Abort_circuit;
     private javax.swing.JPanel Canva_circuit;
     private javax.swing.JLabel Etiq_Pallete;
+    private javax.swing.JLabel LabeNAND;
     private javax.swing.JLabel LabelAND;
+    private javax.swing.JLabel LabelNOR;
+    private javax.swing.JLabel LabelNOT;
+    private javax.swing.JLabel LabelOR;
+    private javax.swing.JLabel LabelXNOR;
+    private javax.swing.JLabel LabelXOR;
     private javax.swing.JLayeredPane Pallete_Canva;
     private javax.swing.JButton Probar_Boton;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
     // End of variables declaration//GEN-END:variables
 }
