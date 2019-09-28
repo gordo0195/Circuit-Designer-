@@ -9,6 +9,12 @@ package circuitdesigner;
  *
  * @author marco
  */
+import java.awt.Component;
+import java.awt.event.MouseEvent;
+import javax.swing.*;
+import java.awt.event.MouseListener;
+import javax.swing.JComponent;
+import javax.swing.TransferHandler;
 
 
 public class Window_Circuit extends javax.swing.JFrame {
@@ -35,7 +41,7 @@ public class Window_Circuit extends javax.swing.JFrame {
         Etiq_Pallete = new javax.swing.JLabel();
         Pallete_Canva = new javax.swing.JLayeredPane();
         LabelAND = new javax.swing.JLabel();
-        LabeNAND = new javax.swing.JLabel();
+        LabelNAND = new javax.swing.JLabel();
         LabelOR = new javax.swing.JLabel();
         LabelNOR = new javax.swing.JLabel();
         LabelXOR = new javax.swing.JLabel();
@@ -43,7 +49,6 @@ public class Window_Circuit extends javax.swing.JFrame {
         LabelNOT = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setPreferredSize(new java.awt.Dimension(1100, 700));
         setResizable(false);
         setSize(new java.awt.Dimension(110, 700));
 
@@ -51,6 +56,7 @@ public class Window_Circuit extends javax.swing.JFrame {
         Canva_circuit.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Circuit Designer by Marco Picado", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Dialog", 1, 14), new java.awt.Color(6, 4, 237))); // NOI18N
         Canva_circuit.setPreferredSize(new java.awt.Dimension(110, 700));
 
+        Abort_circuit.setBackground(new java.awt.Color(30, 9, 9));
         Abort_circuit.setFont(new java.awt.Font("Ubuntu", 1, 13)); // NOI18N
         Abort_circuit.setForeground(new java.awt.Color(169, 25, 25));
         Abort_circuit.setText("Salir");
@@ -61,6 +67,7 @@ public class Window_Circuit extends javax.swing.JFrame {
             }
         });
 
+        Probar_Boton.setBackground(new java.awt.Color(32, 11, 11));
         Probar_Boton.setFont(new java.awt.Font("Ubuntu", 1, 13)); // NOI18N
         Probar_Boton.setForeground(new java.awt.Color(73, 84, 196));
         Probar_Boton.setText("Probar");
@@ -77,21 +84,56 @@ public class Window_Circuit extends javax.swing.JFrame {
         Pallete_Canva.setAutoscrolls(true);
 
         LabelAND.setIcon(new javax.swing.ImageIcon(getClass().getResource("/circuitdesigner/images/and.png"))); // NOI18N
+        LabelAND.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                LabelANDMouseClicked(evt);
+            }
+        });
 
-        LabeNAND.setIcon(new javax.swing.ImageIcon(getClass().getResource("/circuitdesigner/images/nand.png"))); // NOI18N
+        LabelNAND.setIcon(new javax.swing.ImageIcon(getClass().getResource("/circuitdesigner/images/nand.png"))); // NOI18N
+        LabelNAND.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                LabelNANDMouseClicked(evt);
+            }
+        });
 
         LabelOR.setIcon(new javax.swing.ImageIcon(getClass().getResource("/circuitdesigner/images/or.png"))); // NOI18N
+        LabelOR.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                LabelORMouseClicked(evt);
+            }
+        });
 
         LabelNOR.setIcon(new javax.swing.ImageIcon(getClass().getResource("/circuitdesigner/images/nor.png"))); // NOI18N
+        LabelNOR.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                LabelNORMouseClicked(evt);
+            }
+        });
 
         LabelXOR.setIcon(new javax.swing.ImageIcon(getClass().getResource("/circuitdesigner/images/xor.png"))); // NOI18N
+        LabelXOR.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                LabelXORMouseClicked(evt);
+            }
+        });
 
         LabelXNOR.setIcon(new javax.swing.ImageIcon(getClass().getResource("/circuitdesigner/images/xnor.png"))); // NOI18N
+        LabelXNOR.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                LabelXNORMouseClicked(evt);
+            }
+        });
 
         LabelNOT.setIcon(new javax.swing.ImageIcon(getClass().getResource("/circuitdesigner/images/not.png"))); // NOI18N
+        LabelNOT.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                LabelNOTMouseClicked(evt);
+            }
+        });
 
         Pallete_Canva.setLayer(LabelAND, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        Pallete_Canva.setLayer(LabeNAND, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        Pallete_Canva.setLayer(LabelNAND, javax.swing.JLayeredPane.DEFAULT_LAYER);
         Pallete_Canva.setLayer(LabelOR, javax.swing.JLayeredPane.DEFAULT_LAYER);
         Pallete_Canva.setLayer(LabelNOR, javax.swing.JLayeredPane.DEFAULT_LAYER);
         Pallete_Canva.setLayer(LabelXOR, javax.swing.JLayeredPane.DEFAULT_LAYER);
@@ -110,7 +152,7 @@ public class Window_Circuit extends javax.swing.JFrame {
                     .addComponent(LabelXOR, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(LabelNOR, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(LabelOR, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(LabeNAND, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(LabelNAND, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addGroup(javax.swing.GroupLayout.Alignment.LEADING, Pallete_CanvaLayout.createSequentialGroup()
                         .addComponent(LabelAND)
                         .addGap(0, 0, Short.MAX_VALUE)))
@@ -121,7 +163,7 @@ public class Window_Circuit extends javax.swing.JFrame {
             .addGroup(Pallete_CanvaLayout.createSequentialGroup()
                 .addComponent(LabelAND, javax.swing.GroupLayout.PREFERRED_SIZE, 86, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(LabeNAND)
+                .addComponent(LabelNAND)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(LabelOR, javax.swing.GroupLayout.PREFERRED_SIZE, 86, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -156,11 +198,12 @@ public class Window_Circuit extends javax.swing.JFrame {
             .addGroup(Canva_circuitLayout.createSequentialGroup()
                 .addComponent(Etiq_Pallete, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 18, Short.MAX_VALUE)
-                .addGroup(Canva_circuitLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, Canva_circuitLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(Probar_Boton, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(Abort_circuit, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(Pallete_Canva, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addComponent(Pallete_Canva, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, Canva_circuitLayout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(Canva_circuitLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(Probar_Boton, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(Abort_circuit, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -184,6 +227,68 @@ public class Window_Circuit extends javax.swing.JFrame {
         
     }//GEN-LAST:event_Abort_circuitActionPerformed
 
+    private void LabelANDMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_LabelANDMouseClicked
+       LabelAND.addMouseListener(MouseL);
+       LabelAND.setTransferHandler(new TransferHandler("icon"));
+    }//GEN-LAST:event_LabelANDMouseClicked
+
+    private void LabelNANDMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_LabelNANDMouseClicked
+        LabelNAND.addMouseListener(MouseL);
+        LabelNAND.setTransferHandler(new TransferHandler("icon"));
+    }//GEN-LAST:event_LabelNANDMouseClicked
+
+    private void LabelORMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_LabelORMouseClicked
+       LabelOR.addMouseListener(MouseL);
+       LabelOR.setTransferHandler(new TransferHandler("icon"));
+    }//GEN-LAST:event_LabelORMouseClicked
+
+    private void LabelNORMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_LabelNORMouseClicked
+        LabelNOR.addMouseListener(MouseL);
+        LabelNOR.setTransferHandler(new TransferHandler("icon"));
+    }//GEN-LAST:event_LabelNORMouseClicked
+
+    private void LabelXORMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_LabelXORMouseClicked
+        LabelXOR.addMouseListener(MouseL);
+        LabelXOR.setTransferHandler(new TransferHandler("icon"));
+    }//GEN-LAST:event_LabelXORMouseClicked
+
+    private void LabelXNORMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_LabelXNORMouseClicked
+        LabelXNOR.addMouseListener(MouseL);
+        LabelXNOR.setTransferHandler(new TransferHandler("icon"));
+    }//GEN-LAST:event_LabelXNORMouseClicked
+
+    private void LabelNOTMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_LabelNOTMouseClicked
+        LabelNOT.addMouseListener(MouseL);
+        LabelNOT.setTransferHandler(new TransferHandler("icon"));
+    }//GEN-LAST:event_LabelNOTMouseClicked
+    MouseListener MouseL = new MouseListener(){
+        
+
+            @Override
+            public void mouseClicked(MouseEvent e) {}
+
+            @Override
+            public void mousePressed(MouseEvent e) {
+            JComponent jc = (JComponent)e.getSource();
+            TransferHandler th = jc.getTransferHandler();
+            th.exportAsDrag(jc, e, TransferHandler.COPY);
+            }
+
+            @Override
+            public void mouseReleased(MouseEvent e) {}
+
+            @Override
+            public void mouseEntered(MouseEvent e) {}
+
+            @Override
+            public void mouseExited(MouseEvent e) {}
+        };
+        
+   
+    
+    
+    
+    
     /**
      * @param args the command line arguments
      */
@@ -213,8 +318,10 @@ public class Window_Circuit extends javax.swing.JFrame {
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
+            @Override
             public void run() {
-                new Window_Circuit().setVisible(true);
+                new Window_Circuit().setVisible(true);      
+
             }
         });
     }
@@ -223,8 +330,8 @@ public class Window_Circuit extends javax.swing.JFrame {
     private javax.swing.JButton Abort_circuit;
     private javax.swing.JPanel Canva_circuit;
     private javax.swing.JLabel Etiq_Pallete;
-    private javax.swing.JLabel LabeNAND;
     private javax.swing.JLabel LabelAND;
+    private javax.swing.JLabel LabelNAND;
     private javax.swing.JLabel LabelNOR;
     private javax.swing.JLabel LabelNOT;
     private javax.swing.JLabel LabelOR;
@@ -233,4 +340,5 @@ public class Window_Circuit extends javax.swing.JFrame {
     private javax.swing.JLayeredPane Pallete_Canva;
     private javax.swing.JButton Probar_Boton;
     // End of variables declaration//GEN-END:variables
+
 }

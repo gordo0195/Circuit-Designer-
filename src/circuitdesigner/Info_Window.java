@@ -50,6 +50,7 @@ public class Info_Window extends javax.swing.JFrame {
         Txt_Info.setText("      Instituto Tecnológico de Costa Rica.\n\n     Algoritmos y Estructuras de Datos I.\n\n             Proyecto Programado Uno:\n\n                    Circuit Designer.\n\n                          Profesor:\n\n                     Antonio Torres.\n\n                          Alumno:\n\n                     Marco Picado M.\n\n                           Versión: \n\n                              0.5.5");
         jScrollPane1.setViewportView(Txt_Info);
 
+        Boton_Atrás.setBackground(new java.awt.Color(27, 11, 11));
         Boton_Atrás.setFont(new java.awt.Font("Garuda", 1, 14)); // NOI18N
         Boton_Atrás.setForeground(new java.awt.Color(223, 77, 77));
         Boton_Atrás.setText("Atrás");

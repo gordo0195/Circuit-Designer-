@@ -100,6 +100,9 @@
         </Component>
         <Component class="javax.swing.JButton" name="boton_acerca">
           <Properties>
+            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="15" green="15" red="c" type="rgb"/>
+            </Property>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Garuda" size="14" style="1"/>
             </Property>
@@ -110,7 +113,7 @@
             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
               <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
                 <LineBorder roundedCorners="true" thickness="3">
-                  <Color PropertyName="color" blue="7d" green="6c" red="60" type="rgb"/>
+                  <Color PropertyName="color" blue="7" green="6c" red="bb" type="rgb"/>
                 </LineBorder>
               </Border>
             </Property>
@@ -121,6 +124,9 @@
         </Component>
         <Component class="javax.swing.JButton" name="boton_crear">
           <Properties>
+            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="19" green="19" red="22" type="rgb"/>
+            </Property>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Garuda" size="14" style="3"/>
             </Property>
@@ -131,7 +137,7 @@
             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
               <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
                 <LineBorder roundedCorners="true" thickness="3">
-                  <Color PropertyName="color" blue="7d" green="6c" red="60" type="rgb"/>
+                  <Color PropertyName="color" blue="31" green="a0" red="13" type="rgb"/>
                 </LineBorder>
               </Border>
             </Property>
@@ -142,6 +148,9 @@
         </Component>
         <Component class="javax.swing.JButton" name="Bot&#xf3;n_SalidaPrincip">
           <Properties>
+            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="e" green="e" red="21" type="rgb"/>
+            </Property>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Garuda" size="14" style="3"/>
             </Property>
@@ -152,7 +161,7 @@
             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
               <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
                 <LineBorder roundedCorners="true" thickness="3">
-                  <Color PropertyName="color" blue="7d" green="6c" red="60" type="rgb"/>
+                  <Color PropertyName="color" blue="28" green="25" red="f8" type="rgb"/>
                 </LineBorder>
               </Border>
             </Property>

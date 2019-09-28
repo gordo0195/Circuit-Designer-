@@ -41,30 +41,33 @@ public class Window extends javax.swing.JFrame {
         Etiqueta_TItuloRaíz.setForeground(new java.awt.Color(226, 235, 254));
         Etiqueta_TItuloRaíz.setText("  CIRCUIT DESIGNER ");
 
+        boton_acerca.setBackground(new java.awt.Color(12, 21, 21));
         boton_acerca.setFont(new java.awt.Font("Garuda", 1, 14)); // NOI18N
         boton_acerca.setForeground(new java.awt.Color(255, 133, 0));
         boton_acerca.setText("Acerca de:");
-        boton_acerca.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(96, 108, 125), 3, true));
+        boton_acerca.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(187, 108, 7), 3, true));
         boton_acerca.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 boton_acercaActionPerformed(evt);
             }
         });
 
+        boton_crear.setBackground(new java.awt.Color(34, 25, 25));
         boton_crear.setFont(new java.awt.Font("Garuda", 3, 14)); // NOI18N
         boton_crear.setForeground(new java.awt.Color(54, 255, 0));
         boton_crear.setText("Crear");
-        boton_crear.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(96, 108, 125), 3, true));
+        boton_crear.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(19, 160, 49), 3, true));
         boton_crear.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 boton_crearActionPerformed(evt);
             }
         });
 
+        Botón_SalidaPrincip.setBackground(new java.awt.Color(33, 14, 14));
         Botón_SalidaPrincip.setFont(new java.awt.Font("Garuda", 3, 14)); // NOI18N
         Botón_SalidaPrincip.setForeground(new java.awt.Color(255, 24, 0));
         Botón_SalidaPrincip.setText("Salir");
-        Botón_SalidaPrincip.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(96, 108, 125), 3, true));
+        Botón_SalidaPrincip.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(248, 37, 40), 3, true));
         Botón_SalidaPrincip.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 Botón_SalidaPrincipActionPerformed(evt);
