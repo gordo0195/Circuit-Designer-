@@ -15,6 +15,8 @@ import javax.swing.*;
 import java.awt.event.MouseListener;
 import javax.swing.JComponent;
 import javax.swing.TransferHandler;
+import java.awt.MouseInfo;
+import java.awt.Point;
 
 
 public class Window_Circuit extends javax.swing.JFrame {
@@ -85,6 +87,9 @@ public class Window_Circuit extends javax.swing.JFrame {
 
         LabelAND.setIcon(new javax.swing.ImageIcon(getClass().getResource("/circuitdesigner/images/and.png"))); // NOI18N
         LabelAND.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseReleased(java.awt.event.MouseEvent evt) {
+                LabelANDMouseReleased(evt);
+            }
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 LabelANDMouseClicked(evt);
             }
@@ -230,21 +235,29 @@ public class Window_Circuit extends javax.swing.JFrame {
     private void LabelANDMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_LabelANDMouseClicked
        LabelAND.addMouseListener(MouseL);
        LabelAND.setTransferHandler(new TransferHandler("icon"));
+       
+        //Point puntoAND = MouseInfo.getPointerInfo().getLocation(); 
+        //System.out.println(puntoAND);
     }//GEN-LAST:event_LabelANDMouseClicked
 
     private void LabelNANDMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_LabelNANDMouseClicked
         LabelNAND.addMouseListener(MouseL);
         LabelNAND.setTransferHandler(new TransferHandler("icon"));
+        
+        Point puntoNAND = MouseInfo.getPointerInfo().getLocation(); 
     }//GEN-LAST:event_LabelNANDMouseClicked
 
     private void LabelORMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_LabelORMouseClicked
        LabelOR.addMouseListener(MouseL);
        LabelOR.setTransferHandler(new TransferHandler("icon"));
+       
+       Point puntoOR = MouseInfo.getPointerInfo().getLocation(); 
     }//GEN-LAST:event_LabelORMouseClicked
 
     private void LabelNORMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_LabelNORMouseClicked
         LabelNOR.addMouseListener(MouseL);
         LabelNOR.setTransferHandler(new TransferHandler("icon"));
+        
     }//GEN-LAST:event_LabelNORMouseClicked
 
     private void LabelXORMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_LabelXORMouseClicked
@@ -261,6 +274,16 @@ public class Window_Circuit extends javax.swing.JFrame {
         LabelNOT.addMouseListener(MouseL);
         LabelNOT.setTransferHandler(new TransferHandler("icon"));
     }//GEN-LAST:event_LabelNOTMouseClicked
+
+    private void LabelANDMouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_LabelANDMouseReleased
+        JLabel ImgTemp = new JLabel();
+        ImgTemp.setSize(50, 50);
+        Point puntoAND = MouseInfo.getPointerInfo().getLocation();
+        ImgTemp.addMouseListener(MouseL);
+        ImgTemp.setTransferHandler(new TransferHandler("icon"));
+        ImgTemp.setLocation(puntoAND);
+        Canva_circuit.add(ImgTemp);
+    }//GEN-LAST:event_LabelANDMouseReleased
     MouseListener MouseL = new MouseListener(){
         
 
