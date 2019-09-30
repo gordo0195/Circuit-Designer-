@@ -14,10 +14,20 @@ package circuitdesigner;
 public class Window extends javax.swing.JFrame {
     /**
      * clase padre de la ventana raíz. 
+     * Entradas: N/A
+     * Salidas: Se genera la base a completitud de la clase padre Window 
+     * Restricciones: Esta clase no tiene restricción a interactuar con ninguna otra clase de toda la aplicación.
      * 
      */
     public  Window() {
+        /**SE INICIALIZAN TODOS LOS COMPONENTES DE NUESTRA VENTANA RAIZ
+         Entradas: Esta clase no tiene entradas
+         * Salidas: llamada a todas las instancias y metodos de la aplicación
+         * Restricciones: este método no posee restricciones para iniciar cualquier otro de la aplicación 
+         
+         */
         initComponents();
+        
     }
 
     /**
@@ -126,27 +136,28 @@ public class Window extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void boton_acercaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton_acercaActionPerformed
-        
+        // este botón nos lleva a la ventana ACERCA DE ESTE SOFTWARE
         Info_Window Info = new Info_Window();
         Info.setVisible(true);
         
     }//GEN-LAST:event_boton_acercaActionPerformed
 
     private void Botón_SalidaPrincipActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Botón_SalidaPrincipActionPerformed
-        
+        /**ESTE BOTON NOS SACA DE LA VENTANA PRINCIPAL */
         this.setVisible(false);
         
         this.dispose();
     }//GEN-LAST:event_Botón_SalidaPrincipActionPerformed
 
     private void boton_crearActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton_crearActionPerformed
+        /**BOTON QUE INICIALIZA LA VENTANA DE CREACIÓN DE CIRCUITOS */
         Window_Circuit Circuit = new Window_Circuit();
         Circuit.setVisible(true);
     }//GEN-LAST:event_boton_crearActionPerformed
 
     
     public static void main(String args[]) {
-        //*Aquí se inicia la ventana maestra: */
+        /***Aquí se inicia la ventana maestra: */
         
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {

@@ -1,18 +1,24 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package circuitdesigner;
 
 /**
  *
  * @author marco
+ * Instituto Tecnológico de Costa Rica.
+    Algoritmos y Estructuras de Datos I.
+    Proyecto Programado Uno: Circuit Designer.
+    Profesor: Antonio Torres.
+    Alumno: Marco Picado M.
+    Versión:  0.5.5
+    Segundo semestre 2019.
  */
 public class Info_Window extends javax.swing.JFrame {
 
     /**
-     * Creates new form Info_Window
+     * Se inicializa todos los componentes de Info_Window
+     * Entradas: N/A
+     * Salidas: se genera la clase principal de Info_Window
+     * Restricciones: Solo aplica para esta ventana, no instancia nada a Window_Circuit.
      */
     public Info_Window() {
         initComponents();
@@ -105,7 +111,10 @@ public class Info_Window extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void Boton_AtrásActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Boton_AtrásActionPerformed
-        
+        /**boton que nos cierra la ventana de información
+         
+         
+         */
         this.setVisible(false);
         
         this.dispose();
@@ -116,7 +125,13 @@ public class Info_Window extends javax.swing.JFrame {
      * @param args the command line arguments
      */
     public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
+        /**
+         Método principal de la ventana Info_Window
+         aquí se inician y se llaman todos los métodos de nuestra ventana de información 
+         Entradas: N/A
+         Salidas: ventana de información 
+         Restriccines: Solo atiende al llamado desde Window.java 
+         */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
         /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
          * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
